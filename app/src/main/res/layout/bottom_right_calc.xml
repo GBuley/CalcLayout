@@ -10,40 +10,40 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/one"
         style="@style/relative_number_buttons"
-        android:layout_marginHorizontal="10dp"
-        android:text="/"
+        android:layout_marginHorizontal="5dp"
+        android:text="@string/slash"
 
         />
     <com.google.android.material.button.MaterialButton
         android:id="@+id/two"
         style="@style/relative_number_buttons"
-        android:layout_marginHorizontal="10dp"
-        android:text="x"
+        android:layout_marginHorizontal="5dp"
+        android:text="@string/x"
         android:layout_below="@+id/one"
 
         />
     <com.google.android.material.button.MaterialButton
         android:id="@+id/three"
         style="@style/relative_number_buttons"
-        android:layout_marginHorizontal="10dp"
-        android:text="-"
+        android:layout_marginHorizontal="5dp"
+        android:text="@string/minus"
         android:layout_below="@+id/two"
 
         /><com.google.android.material.button.MaterialButton
         android:id="@+id/four"
         style="@style/relative_number_buttons"
-        android:layout_marginHorizontal="10dp"
-        android:text="+"
+        android:layout_marginHorizontal="5dp"
+        android:text="@string/plus"
         android:layout_below="@+id/three"
 
         />
     <com.google.android.material.button.MaterialButton
         android:id="@+id/five"
         style="@style/relative_number_buttons"
-        android:layout_marginHorizontal="10dp"
+        android:layout_marginHorizontal="5dp"
         android:textColor="@color/black"
         android:backgroundTint="@color/white"
-        android:text="="
+        android:text="@string/equal"
         android:layout_below="@+id/four"
 
         />

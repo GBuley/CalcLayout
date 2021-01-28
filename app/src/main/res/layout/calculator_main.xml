@@ -16,6 +16,6 @@
     <include layout="@layout/bottom_right_calc"
         android:layout_height="500dp"
         android:layout_width="100dp"
-        android:layout_gravity="bottom|right"/>
+        android:layout_gravity="bottom|end"/>
 
 </FrameLayout>
