@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:maxHeight="200dp"
+    android:background="@color/support_teal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        style="@style/title_text"
+        android:text="@string/calculator"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/equation_text"
+        style="@style/calculations_text"
+        android:text="@string/calc_str"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/title"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/result_text"
+        style="@style/calculations_text"
+        android:text="@string/result_string"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/bearkat_orange"
+        android:layout_below="@+id/equation_text" />
+
+</RelativeLayout>

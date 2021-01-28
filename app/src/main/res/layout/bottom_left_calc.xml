@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:maxHeight="550dp"
+    android:background="@color/support_grey">
+    <LinearLayout
+        android:id="@+id/top_row"
+        style="@style/linear_layout_nums"
+        android:layout_alignParentTop="true">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/one"
+            style="@style/number_buttons"
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/percent"
+
+            tools:ignore="ContentDescription" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/two"
+            style="@style/number_buttons"
+            android:layout_marginEnd="10dp"
+            android:text="@string/open_paren"
+
+            tools:ignore="ContentDescription"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/three"
+            style="@style/number_buttons"
+            android:layout_marginEnd="10dp"
+            android:text="@string/close_paren"
+
+            tools:ignore="ContentDescription"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/second_row"
+        style="@style/linear_layout_nums"
+        android:layout_below="@+id/top_row">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/four"
+            style="@style/number_buttons"
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/_7"
+
+            tools:ignore="ContentDescription" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/five"
+            style="@style/number_buttons"
+            android:layout_marginEnd="10dp"
+            android:text="@string/_8"
+
+            tools:ignore="ContentDescription" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/six"
+            style="@style/number_buttons"
+            android:layout_marginEnd="10dp"
+            android:text="@string/_9"
+
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/third_row"
+        style="@style/linear_layout_nums"
+        android:layout_below="@+id/second_row">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/seven"
+            style="@style/number_buttons"
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/_4"
+
+            tools:ignore="ContentDescription" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/eight"
+            style="@style/number_buttons"
+            android:layout_marginEnd="10dp"
+            android:text="@string/_5"
+
+            tools:ignore="ContentDescription" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/nine"
+            style="@style/number_buttons"
+            android:layout_marginEnd="10dp"
+            android:text="@string/_6"
+
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fourth_row"
+        style="@style/linear_layout_nums"
+        android:layout_below="@+id/third_row">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/plus"
+            style="@style/number_buttons"
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/_3"
+
+            tools:ignore="ContentDescription" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/zero"
+            style="@style/number_buttons"
+            android:layout_marginEnd="10dp"
+            android:text="@string/_2"
+
+            tools:ignore="ContentDescription" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/period"
+            style="@style/number_buttons"
+            android:layout_marginEnd="10dp"
+            android:text="@string/_1"
+
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fifth_row"
+        style="@style/linear_layout_nums"
+        android:layout_below="@+id/fourth_row">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/percent"
+            style="@style/number_buttons"
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/plus"
+
+            tools:ignore="ContentDescription" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/open_paren"
+            style="@style/number_buttons"
+            android:layout_marginEnd="10dp"
+            android:text="@string/_0"
+
+            tools:ignore="ContentDescription" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/close_paren"
+            style="@style/number_buttons"
+            android:layout_marginEnd="10dp"
+            android:text="@string/period"
+
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

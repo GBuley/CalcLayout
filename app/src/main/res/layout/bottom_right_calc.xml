@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:maxHeight="500dp"
+    android:maxWidth="100dp"
+    android:background="@color/light_grey"
+    >
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/one"
+        style="@style/relative_number_buttons"
+        android:layout_marginHorizontal="10dp"
+        android:text="/"
+
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/two"
+        style="@style/relative_number_buttons"
+        android:layout_marginHorizontal="10dp"
+        android:text="x"
+        android:layout_below="@+id/one"
+
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/three"
+        style="@style/relative_number_buttons"
+        android:layout_marginHorizontal="10dp"
+        android:text="-"
+        android:layout_below="@+id/two"
+
+        /><com.google.android.material.button.MaterialButton
+        android:id="@+id/four"
+        style="@style/relative_number_buttons"
+        android:layout_marginHorizontal="10dp"
+        android:text="+"
+        android:layout_below="@+id/three"
+
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/five"
+        style="@style/relative_number_buttons"
+        android:layout_marginHorizontal="10dp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:text="="
+        android:layout_below="@+id/four"
+
+        />
+
+
+</RelativeLayout>
