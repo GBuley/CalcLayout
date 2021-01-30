@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,7 +10,7 @@
     <LinearLayout
         android:id="@+id/top_row"
         style="@style/linear_layout_nums"
-        android:layout_alignParentTop="true">
+        >
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/percent"
@@ -40,8 +39,7 @@
 
     <LinearLayout
         android:id="@+id/second_row"
-        style="@style/linear_layout_nums"
-        android:layout_below="@+id/top_row">
+        style="@style/linear_layout_nums">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/seven"
@@ -70,8 +68,7 @@
 
     <LinearLayout
         android:id="@+id/third_row"
-        style="@style/linear_layout_nums"
-        android:layout_below="@+id/second_row">
+        style="@style/linear_layout_nums">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/four"
@@ -101,7 +98,7 @@
     <LinearLayout
         android:id="@+id/fourth_row"
         style="@style/linear_layout_nums"
-        android:layout_below="@+id/third_row">
+        >
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/one"
@@ -130,14 +127,13 @@
 
     <LinearLayout
         android:id="@+id/fifth_row"
-        style="@style/linear_layout_nums"
-        android:layout_below="@+id/fourth_row">
+        style="@style/linear_layout_nums">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/plus"
+            android:id="@+id/clear"
             style="@style/number_buttons"
             android:layout_marginHorizontal="10dp"
-            android:text="@string/plus"
+            android:text="@string/c"
 
             tools:ignore="ContentDescription" />
 
