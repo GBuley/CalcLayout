@@ -14,7 +14,7 @@
         android:layout_alignParentTop="true">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/one"
+            android:id="@+id/percent"
             style="@style/number_buttons"
             android:layout_marginHorizontal="10dp"
             android:text="@string/percent"
@@ -22,7 +22,7 @@
             tools:ignore="ContentDescription" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/two"
+            android:id="@+id/open_paren"
             style="@style/number_buttons"
             android:layout_marginEnd="10dp"
             android:text="@string/open_paren"
@@ -30,7 +30,7 @@
             tools:ignore="ContentDescription" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/three"
+            android:id="@+id/close_paren"
             style="@style/number_buttons"
             android:layout_marginEnd="10dp"
             android:text="@string/close_paren"
@@ -44,7 +44,7 @@
         android:layout_below="@+id/top_row">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/four"
+            android:id="@+id/seven"
             style="@style/number_buttons"
             android:layout_marginHorizontal="10dp"
             android:text="@string/_7"
@@ -52,7 +52,7 @@
             tools:ignore="ContentDescription" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/five"
+            android:id="@+id/eight"
             style="@style/number_buttons"
             android:layout_marginEnd="10dp"
             android:text="@string/_8"
@@ -60,7 +60,7 @@
             tools:ignore="ContentDescription" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/six"
+            android:id="@+id/nine"
             style="@style/number_buttons"
             android:layout_marginEnd="10dp"
             android:text="@string/_9"
@@ -74,7 +74,7 @@
         android:layout_below="@+id/second_row">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/seven"
+            android:id="@+id/four"
             style="@style/number_buttons"
             android:layout_marginHorizontal="10dp"
             android:text="@string/_4"
@@ -82,7 +82,7 @@
             tools:ignore="ContentDescription" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/eight"
+            android:id="@+id/five"
             style="@style/number_buttons"
             android:layout_marginEnd="10dp"
             android:text="@string/_5"
@@ -90,7 +90,7 @@
             tools:ignore="ContentDescription" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/nine"
+            android:id="@+id/six"
             style="@style/number_buttons"
             android:layout_marginEnd="10dp"
             android:text="@string/_6"
@@ -104,15 +104,15 @@
         android:layout_below="@+id/third_row">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/plus"
+            android:id="@+id/one"
             style="@style/number_buttons"
             android:layout_marginHorizontal="10dp"
-            android:text="@string/_3"
+            android:text="@string/_1"
 
             tools:ignore="ContentDescription" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/zero"
+            android:id="@+id/two"
             style="@style/number_buttons"
             android:layout_marginEnd="10dp"
             android:text="@string/_2"
@@ -120,10 +120,10 @@
             tools:ignore="ContentDescription" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/period"
+            android:id="@+id/three"
             style="@style/number_buttons"
             android:layout_marginEnd="10dp"
-            android:text="@string/_1"
+            android:text="@string/_3"
 
             tools:ignore="ContentDescription" />
     </LinearLayout>
@@ -134,7 +134,7 @@
         android:layout_below="@+id/fourth_row">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/percent"
+            android:id="@+id/plus"
             style="@style/number_buttons"
             android:layout_marginHorizontal="10dp"
             android:text="@string/plus"
@@ -142,7 +142,7 @@
             tools:ignore="ContentDescription" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/open_paren"
+            android:id="@+id/zero"
             style="@style/number_buttons"
             android:layout_marginEnd="10dp"
             android:text="@string/_0"
@@ -150,7 +150,7 @@
             tools:ignore="ContentDescription" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/close_paren"
+            android:id="@+id/period"
             style="@style/number_buttons"
             android:layout_marginEnd="10dp"
             android:text="@string/period"

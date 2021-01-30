@@ -122,8 +122,8 @@
     <string name="text_appearance_button_label">Button</string>
     <string name="text_appearance_caption_label">Caption</string>
     <string name="text_appearance_overline_label">Overline</string>
-    <string name="result_string">= 2100</string>
-    <string name="calc_str">2000 + 100</string>
+    <string name="result_string"></string>
+    <string name="calc_str"></string>
     <string name="calculator">Calculator</string>
     <string name="percent">%</string>
     <string name="open_paren">(</string>
