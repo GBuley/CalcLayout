@@ -18,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
     private MaterialTextView calculation;
     private MaterialTextView resultText;
     private String strButton= "";
-    private final char[] operations ={'+','-','/','x'};
+    private final char[] operations ={'+','-','/','X'};
     private final ArrayList<String> stringNums = new ArrayList<>();
     private final ArrayList<Double> nums = new ArrayList<>();
-    Queue<Character> numQueue = new LinkedList<>();
+    LinkedList<Character> numQueue = new LinkedList<>();
     LinkedList<Character> operationQueue = new LinkedList<>();
 
 
@@ -82,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
                     String result = String.valueOf(equation.getText());
                     double actualValue = getResult(result);
                     calculation.setText("= "+ actualValue);
+                    stringNums.clear();
+                    operationQueue.clear();
                 }
             });
         }
@@ -104,6 +106,23 @@ public class MainActivity extends AppCompatActivity {
                 if(Character.isDigit(c)){
                     numQueue.add(c);
                 }
+                else if(c=='.'){
+                    numQueue.add(c);
+                }
+                else if(c=='%'){
+                    if(numQueue.size() ==1){
+                        numQueue.addFirst('0');
+                        numQueue.addFirst('.');
+                    }else if(numQueue.size() ==2){
+                        numQueue.addFirst('.');
+                    }else{
+                        int queueSize = numQueue.size();
+                        numQueue.add(queueSize-2,'.');
+                    }
+                }
+                else if(c=='-'&& numQueue.size()==0){
+                    numQueue.add(c);
+                }
                 else{
                     listNumber(numQueue);
                     operationQueue.add(c);
@@ -116,38 +135,36 @@ public class MainActivity extends AppCompatActivity {
 
     private double equationBuilder() {
         if(operationQueue.isEmpty()){
-            listNumber(numQueue);
             return Double.parseDouble(stringNums.get(0));
         }
 
         double finalNumber;
         finalNumber = 0;
+
         for(int i=0; i<operationQueue.size();i++){
             if(i==0){
                 if(operationQueue.get(0)=='+'){
                     finalNumber = Double.parseDouble(stringNums.get(i))+Double.parseDouble(stringNums.get(i+1));
-                }if(operationQueue.get(0)=='/'){
+                }else if(operationQueue.get(0)=='/'){
                     finalNumber = Double.parseDouble(stringNums.get(i))/Double.parseDouble(stringNums.get(i+1));
-                }if(operationQueue.get(0)=='X'){
+                }else if(operationQueue.get(0)=='X'){
                     finalNumber = Double.parseDouble(stringNums.get(i))*Double.parseDouble(stringNums.get(i+1));
-                }if(operationQueue.get(0)=='-'){
+                }else if(operationQueue.get(0)=='-'){
                     finalNumber = Double.parseDouble(stringNums.get(i))-Double.parseDouble(stringNums.get(i+1));
                 }
             }
             else{
                 if(operationQueue.get(i)=='+'){
                     finalNumber += Double.parseDouble(stringNums.get(i+1));
-                }if(operationQueue.get(i)=='/'){
+                }else if(operationQueue.get(i)=='/'){
                     finalNumber /= Double.parseDouble(stringNums.get(i+1));
-                }if(operationQueue.get(i)=='X'){
+                }else if(operationQueue.get(i)=='X'){
                     finalNumber *= Double.parseDouble(stringNums.get(i+1));
-                }if(operationQueue.get(i)=='-'){
+                }else if(operationQueue.get(i)=='-'){
                     finalNumber -= Double.parseDouble(stringNums.get(i+1));
                 }
             }
         }
-        stringNums.clear();
-        operationQueue.clear();
         return finalNumber;
     }
 
@@ -164,10 +181,13 @@ public class MainActivity extends AppCompatActivity {
     private boolean checkIfInvalidOperationUsed(char[] resultChars) {
         int resultCharsLength = resultChars.length;
         for(char o:operations){
-            if(resultChars[0]==o){
+            if(resultChars[0]=='-'){
+                return false;
+            }
+            else if(resultChars[0]==o){
                 return true;
             }
-            if(resultChars[resultCharsLength-1] == o){
+            else if(resultChars[resultCharsLength-1] == o){
                 return true;
             }
         }
