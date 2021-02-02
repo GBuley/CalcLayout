@@ -25,12 +25,6 @@ public class MainActivity extends AppCompatActivity {
     private MaterialTextView resultText;
     private String strButton= "";
     private MainViewModel viewModel;
-    private final char[] operations ={'+','-','/','X'};
-    private final ArrayList<String> stringNums = new ArrayList<>();
-//    private final ArrayList<Double> nums = new ArrayList<>();
-    private LinkedList<Character> numQueue = new LinkedList<>();
-    private LinkedList<Character> operationQueue = new LinkedList<>();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,11 +44,19 @@ public class MainActivity extends AppCompatActivity {
         clearButtonPressed();
         equalButtonPressed(R.id.equal);
 
-        viewModel = new ViewModelProvider(this).get(MainViewModel.class);
+        viewModel = new ViewModelProvider.AndroidViewModelFactory(getApplication()).create(MainViewModel.class);
+        resultText.setText(viewModel.getStringDataKey());
+
         viewModel.getResult().observe(this, new Observer<Double>() {
             @Override
             public void onChanged(Double result) {
                 resultText.setText(String.format((Locale.getDefault()), result.toString()));
+            }
+        });
+        viewModel.getStrEquation().observe(this, new Observer<String>() {
+            @Override
+            public void onChanged(String strEquation) {
+                equation.setText(String.format((Locale.getDefault()), strEquation));
             }
         });
     }
@@ -80,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 strButton = strButton+button.getText();
-                equation.setText(strButton);
+                viewModel.setStrEquation(strButton);
             }
         });
     }
@@ -95,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     String result = String.valueOf(equation.getText());
                     viewModel.findResult(result);
+                    viewModel.saveResult(resultText.getText().toString());
 
                 }
             });

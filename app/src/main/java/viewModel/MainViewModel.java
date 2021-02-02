@@ -1,5 +1,11 @@
 package viewModel;
 
+import android.app.Application;
+import android.content.Context;
+import android.content.SharedPreferences;
+
+import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -8,17 +14,44 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class MainViewModel extends ViewModel {
+import grant.com.myownstyle.R;
+
+public class MainViewModel extends AndroidViewModel {
+    private static final String STRING_DATA_KEY = "STRING_DATA_KEY";
 
     private LinkedList<Character> numQueue = new LinkedList<>();
     private LinkedList<Character> operationQueue = new LinkedList<>();
     private MutableLiveData<Double> result = new MutableLiveData<>();
+    private MutableLiveData<String> strEquation = new MutableLiveData<>();
     private final char[] operations ={'+','-','/','X'};
     private final ArrayList<String> stringNums = new ArrayList<>();
+
+    private final SharedPreferences preferences = getApplication().getSharedPreferences(getApplication().getString(R.string.result_string), Context.MODE_PRIVATE);
+
+    public MainViewModel(@NonNull Application application){ super(application);}
+
+    public void saveResult(String data){
+        preferences.edit().putString(STRING_DATA_KEY, data).apply();
+    }
+
+    public String getStringDataKey(){
+        return preferences.getString(STRING_DATA_KEY, " ");
+    }
+
 
     public LiveData<Double> getResult() {
         return result;
     }
+
+    public LiveData<String> getStrEquation(){
+        return strEquation;
+    }
+
+    public void setStrEquation(String str){
+        strEquation.setValue(str);
+    }
+
+
 
     public void findResult(String resultString) {
         if (resultString.equals("")) {
